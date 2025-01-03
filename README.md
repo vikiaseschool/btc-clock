@@ -1,10 +1,16 @@
-# Bitcoin Clock
+# Crypto Clock
 
-A simple web application that displays the current Bitcoin price in USD, EUR, and CZK, along with the 24-hour percentage change. The application fetches data from the CoinGecko API and updates every 30 seconds.
+A simple web application that displays the current Bitcoin or Ethereum price in USD, EUR, and CZK, along with the 24-hour percentage change. The application fetches data from the CoinGecko API.
 Within this project i was learning CSS styles mostly, completely new to this, I only knew basics and wanted to try something more visualy appealing :)
+
+## V2 Update
+- added Ethereum feature.
+- design improvement
+- added Date, toolbars
+
 ## Features
 
-- Displays Bitcoin price in USD, EUR, and CZK.
+- Displays Bitcoin/Ethereum price in USD, EUR, and CZK.
 - Shows the 24-hour percentage change with an arrow indicating the direction of the change.
 - Responsive design with a visually appealing interface.
 

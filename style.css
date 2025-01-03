@@ -1,71 +1,85 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    padding: 40px;
-    background-color: #1a1a1a;
-    color: #e5e5e5;
+    padding: 0;
+    background: #121212;
+    color: #f4f4f4;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 800px;
     width: 100%;
-    margin: 0 auto;
-    background: radial-gradient(circle, #222, #121212);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-    border: 1px solid #444;
-    backdrop-filter: blur(10px);
+    background: radial-gradient(circle at top, #1e1e1e, #121212);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 60px rgba(0, 0, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 2px solid #444;
+    text-shadow: 0 0 15px rgba(255, 111, 0, 0.7);
+    animation: pulse 1.5s infinite ease-in-out;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.8em;
     color: #ff6f00;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     margin-bottom: 40px;
-    text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00;
+    text-shadow: 0 0 20px #ff6f00, 0 0 40px #ff6f00, 0 0 60px #ff6f00;
     animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
-    0% { text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00; }
-    50% { text-shadow: 0 0 30px #ff6f00, 0 0 50px #ff6f00, 0 0 70px #ff6f00; }
-    100% { text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00; }
+    0% { text-shadow: 0 0 10px #ff6f00, 0 0 30px #ff6f00, 0 0 60px #ff6f00; }
+    50% { text-shadow: 0 0 50px #ff6f00, 0 0 80px #ff6f00, 0 0 100px #ff6f00; }
+    100% { text-shadow: 0 0 10px #ff6f00, 0 0 30px #ff6f00, 0 0 60px #ff6f00; }
 }
 
-.price p {
-    font-size: 1.5em;
+.price {
+    font-size: 2.5em;
+    font-weight: 600;
     margin: 20px 0;
-    font-weight: 500;
-    color: #e5e5e5;
-    transition: transform 0.2s ease-in-out, color 0.3s ease;
+    color: #ddd;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
 }
 
-.price p:hover {
-    transform: scale(1.1);
+.price:hover {
+    transform: translateY(-5px);
     color: #ff6f00;
 }
 
 .change {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
+    color: #f4f4f4;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e5e5e5;
-    transition: transform 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
 }
 
 #changeArrow {
-    font-size: 2.5em;
-    margin-left: 15px;
-    transition: transform 0.3s ease;
+    font-size: 3em;
+    margin-left: 10px;
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .green {
@@ -76,52 +90,58 @@ h1 {
     color: #dc3545;
 }
 
-.change:hover {
-    transform: scale(1.1);
-    color: #ff6f00;
-}
-
-@keyframes slideUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-#changePercent, #changeArrow {
-    animation: slideUp 0.5s ease-out;
-}
-
-button {
-    background-color: #ff6f00;
-    color: white;
-    font-size: 1.3em;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 25px;
+.neon-btn {
+    background: linear-gradient(45deg, #ff6f00, #ff6f00);
+    border: 2px solid #ff6f00;
+    color: #f4f4f4;
+    padding: 16px 36px;
+    font-size: 1.4em;
+    border-radius: 35px;
     cursor: pointer;
     margin-top: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 111, 0, 0.7);
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
 }
 
-button:hover {
-    background-color: #e65c00;
+.neon-btn:hover {
+    background: #ff5200;
+    box-shadow: 0 0 50px rgba(255, 80, 0, 1);
     transform: scale(1.05);
 }
 
-.container {
-    box-shadow: 0 0 30px rgba(255, 111, 0, 0.6);
+select {
+    background: #222;
+    color: #f4f4f4;
+    padding: 14px;
+    border: 2px solid #444;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 0.3s ease, border 0.3s ease;
 }
 
-button, .container {
-    border-radius: 15px;
+select:hover {
+    background: #444;
+    border: 2px solid #ff6f00;
 }
 
-.price p:hover {
+.glowing-text {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    color: #f4f4f4;
+    text-shadow: 0 0 10px #ff6f00, 0 0 20px #ff6f00, 0 0 30px #ff6f00, 0 0 40px #ff6f00;
+}
+
+.glowing-text:hover {
     color: #ff6f00;
-    transform: translateY(-5px);
+    text-shadow: 0 0 15px #ff6f00, 0 0 30px #ff6f00, 0 0 50px #ff6f00;
 }
 
-#changeArrow:hover {
-    transform: rotate(15deg);
-    color: #ff6f00;
+.footer {
+    font-size: 0.8em;
+    color: #bbb;
+    margin-top: 40px;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(255, 111, 0, 0.4);
 }

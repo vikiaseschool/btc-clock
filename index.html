@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTC CLOCK</title>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 <div class="container">
-    <h1>BITCOIN CLOCK</h1>
+    <h1 id="cryptoName">Bitcoin Clock</h1>
     <div class="price">
-        <p id="priceUSD">Cena v USD: </p>
-        <p id="priceEUR">Cena v EUR: </p>
-        <p id="priceCZK">Cena v CZK: </p>
+        <p id="price">Cena: </p>
     </div>
     <div class="change">
-        <p id="changePercent"></p>
+        <p id="changePercent" class="blinking"></p>
         <div id="changeArrow"></div>
     </div>
-</div>
+    <select id="currencySelector">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="czk">CZK</option>
+    </select>
+    <select id="cryptoSelector">
+        <option value="btc">Bitcoin (BTC)</option>
+        <option value="eth">Ethereum (ETH)</option>
+    </select>
+    <button class="neon-btn">Get Latest Data</button>
+    <p class="glowing-text">A new era of digital currency!</p>
 
-<script src="/script.js"></script>
+    <div class="footer" id="currentTime"></div>
+</div>
 </body>
+<script src="/script.js"></script>
+
 </html>

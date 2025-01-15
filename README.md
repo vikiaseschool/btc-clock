@@ -1,9 +1,8 @@
 # Crypto Clock
 
 A simple web application that displays the current Bitcoin or Ethereum price in USD, EUR, and CZK, along with the 24-hour percentage change. The application fetches data from the CoinGecko API.
-Within this project i was learning CSS styles mostly, completely new to this, I only knew basics and wanted to try something more visualy appealing :)
 
-link: demo link: https://entry-h6tkg48ok-viktors-projects-57c32969.vercel.app/ 
+demo link: https://entry-h6tkg48ok-viktors-projects-57c32969.vercel.app/ 
 
 ## V2 Update
 - added Ethereum feature.
